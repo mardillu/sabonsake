@@ -1,0 +1,50 @@
+.flagships-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.flagship-card {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.flagship-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.flagship-header h3 {
+  font-size: 1.5rem;
+  color: var(--text-main);
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  color: var(--accent);
+  background: rgba(125, 177, 91, 0.1);
+  border-color: rgba(125, 177, 91, 0.2);
+  white-space: nowrap;
+}
+
+.flagship-card p {
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 992px) {
+  .flagships-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .flagship-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
