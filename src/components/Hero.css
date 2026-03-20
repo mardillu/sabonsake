@@ -26,16 +26,21 @@
 }
 
 .hero-content {
+  width: 100%;
   max-width: 800px;
 }
 
 .hero-title {
-  font-size: 4.5rem;
+  font-size: clamp(1rem, 8vw, 4.5rem);
   font-weight: 700;
   margin-bottom: 2rem;
   line-height: 1.1;
   letter-spacing: -1px;
   color: #FFF; /* Ensure title is white on dark bg */
+}
+
+.no-wrap {
+  white-space: nowrap;
 }
 
 .hero-subtitle {
@@ -58,9 +63,6 @@
 }
 
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 3rem;
-  }
   .hero-subtitle {
     font-size: 1.1rem;
     padding: 1.25rem;

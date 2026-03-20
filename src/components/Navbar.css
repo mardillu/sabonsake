@@ -61,8 +61,86 @@
   width: 100%;
 }
 
+/* Mobile elements hidden by default */
+.mobile-menu-btn {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--primary);
+  z-index: 1001; 
+}
+
+.nav-overlay {
+  display: none;
+}
+
+.mobile-only-action {
+  display: none;
+}
+
+.desktop-only-action {
+  display: block;
+}
+
 @media (max-width: 768px) {
-  .nav-links, .nav-actions {
+  .mobile-menu-btn {
+    display: block;
+  }
+  
+  .desktop-only-action {
     display: none;
+  }
+  
+  .mobile-only-action {
+    display: block;
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hide off-screen */
+    width: 250px;
+    height: 100vh;
+    background: var(--bg-light);
+    flex-direction: column;
+    padding: 80px 2rem 2rem;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+  
+  .nav-links.nav-active {
+    right: 0; /* Slide in */
+  }
+
+  .nav-links a {
+    color: var(--primary);
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-glass);
+  }
+  
+  .nav-links a::after {
+    display: none; /* remove hover line in mobile drawer */
+  }
+
+  /* Fix Primary Button inside nav drawer */
+  .mobile-only-action a.btn-primary {
+    color: #FFF;
+    border-bottom: none;
+  }
+
+  /* Overlay styles */
+  .nav-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 999;
   }
 }

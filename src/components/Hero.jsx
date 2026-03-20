@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="hero-content animate-fade-in">
           <h1 className="hero-title">
             REGENERATIVE <br />
-            <span className="text-gradient">SOIL SOLUTIONS</span>
+            <span className="text-gradient no-wrap">SOIL SOLUTIONS</span>
           </h1>
           <p className="hero-subtitle glass-panel">
             Transforming local resources into value-added products and regenerative services. 
