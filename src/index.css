@@ -4,8 +4,9 @@
   --primary: #1A3C18;       /* Deep dark green from logo */
   --accent: #7DB15B;        /* Actionable bright green */
   --accent-light: #A4D086;
-  --bg-light: #F9FDF9;      /* Very light green/off-white background */
+  --bg-light: #FFF;      /* Very light green/off-white background */
   --bg-card: rgba(255, 255, 255, 0.7); /* Lighter frosted glass */
+    --bg-card-dark: rgba(0, 0, 0, 0.33); /* darker frosted glass */
   --text-main: #1A201A;     /* Dark gray/almost black for readability */
   --text-muted: #4A5D4A;    /* Darker muted green/gray */
   --border-glass: rgba(125, 177, 91, 0.2); /* Light green tint for borders */
