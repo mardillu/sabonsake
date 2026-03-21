@@ -69,6 +69,12 @@
   border: 1px solid rgba(125, 177, 91, 0.2);
 }
 
+@media (max-width: 992px) {
+  .product-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
   .showcase-grid {
     grid-template-columns: 1fr;
